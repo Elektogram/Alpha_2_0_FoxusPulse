@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "Alpha_2_0_FoxusPulse",
-    "slug": "Alpha_2_0_FoxusPulse",
+    "name": "FoxusPulse",
+    "slug": "FoxusPulse",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/favicon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/images/splash-icon.png",
+      "image": "./assets/images/favicon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -18,11 +18,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/favicon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
+      "name": "FoxusPulse",
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png"

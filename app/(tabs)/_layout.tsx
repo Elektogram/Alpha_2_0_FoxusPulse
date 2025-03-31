@@ -1,11 +1,7 @@
-// app/(tabs)/_layout.tsx
-
 import FontAwesome from '@expo/vector-icons/FontAwesome'
 import { Tabs } from 'expo-router'
-import { Pressable } from 'react-native'
 import { useColorScheme } from '@/components/useColorScheme'
-import { Text } from 'tamagui'
-import { themes } from '@/themes'; // veya '../themes' projenin yapısına göre
+import { themes } from '@/themes'
 
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name']
@@ -16,26 +12,43 @@ function TabBarIcon(props: {
 
 export default function TabLayout() {
   const colorScheme = useColorScheme()
-  const currentTheme = themes[colorScheme ?? 'light'];
+  const currentTheme = themes[colorScheme ?? 'light']
+
   return (
     <Tabs
-    screenOptions={{
-      tabBarActiveTintColor: currentTheme.tabIcon,
-      tabBarInactiveTintColor: currentTheme.tabText,
-      headerShown: false,      }}
+      screenOptions={{
+        tabBarActiveTintColor: currentTheme.tabIcon,
+        tabBarInactiveTintColor: currentTheme.tabText,
+        headerShown: false,
+      }}
     >
+      {/* Bu ilk sıradaki 'index' otomatik olarak ilk açılan ekran olur */}
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Görevler',
-          tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
+          title: 'Takvim',
+          tabBarIcon: ({ color }) => <TabBarIcon name="calendar" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="aı"
         options={{
-          title: 'Diğer',
-          tabBarIcon: ({ color }) => <TabBarIcon name="cogs" color={color} />,
+          title: 'AI',
+          tabBarIcon: ({ color }) => <TabBarIcon name="cloud" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="rewards"
+        options={{
+          title: 'Ödüller',
+          tabBarIcon: ({ color }) => <TabBarIcon name="trophy" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profil',
+          tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
         }}
       />
     </Tabs>
