@@ -66,7 +66,7 @@ export const tokens = {
           },
         },
         body: {
-          family: 'Manrope',
+          family: 'system-ui',
           size: {
             2: 14,
             3: 16,

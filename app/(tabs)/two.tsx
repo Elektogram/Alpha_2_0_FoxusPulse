@@ -1,31 +1,16 @@
-import { StyleSheet } from 'react-native';
+// app/(tabs)/two.tsx
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
+import { YStack, Text } from 'tamagui'
 
 export default function TabTwoScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
-    </View>
-  );
+    <YStack f={1} ai="center" jc="center" p="$4">
+      <Text fontSize={20} fontWeight="700">
+        Diğer Özellikler
+      </Text>
+      <Text mt="$4" color="$color">
+        Yakında burada AI ve teşvik sistemiyle ilgili bilgiler olacak.
+      </Text>
+    </YStack>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});

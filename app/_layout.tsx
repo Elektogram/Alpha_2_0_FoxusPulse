@@ -1,53 +1,49 @@
-// app/_layout.tsx
+import FontAwesome from '@expo/vector-icons/FontAwesome'
+import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
+import { useFonts } from 'expo-font'
+import { Stack } from 'expo-router'
+import * as SplashScreen from 'expo-splash-screen'
+import { useEffect } from 'react'
+import 'react-native-reanimated'
 
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import { TamaguiProvider } from 'tamagui'
+import config from '../tamagui.config'
+import { useColorScheme } from '@/components/useColorScheme'
 
-import { TamaguiProvider } from '@tamagui/core';
-import config from '../tamagui.config';
-import { useColorScheme } from '@/components/useColorScheme';
-
-export {
-  ErrorBoundary,
-} from 'expo-router';
+export { ErrorBoundary } from 'expo-router'
 
 export const unstable_settings = {
   initialRouteName: '(tabs)',
-};
-
-SplashScreen.preventAutoHideAsync();
+}
 
 export default function RootLayout() {
-  const [loaded, error] = useFonts({
-    Manrope: require('../assets/fonts/Manrope-Regular.ttf'),
-    'Manrope-Medium': require('../assets/fonts/Manrope-Medium.ttf'),
-    'Manrope-Bold': require('../assets/fonts/Manrope-Bold.ttf'),
-  });
+  const [fontsLoaded, error] = useFonts({
+    Manrope: require('../assets/fonts/static/Manrope-Regular.ttf'),
+    'Manrope-Medium': require('../assets/fonts/static/Manrope-Medium.ttf'),
+    'Manrope-Bold': require('../assets/fonts/static/Manrope-Bold.ttf'),
+  })
 
   useEffect(() => {
-    if (error) throw error;
-  }, [error]);
+    SplashScreen.preventAutoHideAsync()
+  }, [])
 
   useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
+    if (fontsLoaded) {
+      SplashScreen.hideAsync()
     }
-  }, [loaded]);
+  }, [fontsLoaded])
 
-  if (!loaded) {
-    return null;
-  }
+  useEffect(() => {
+    if (error) throw error
+  }, [error])
 
-  return <RootLayoutNav />;
+  if (!fontsLoaded) return null
+
+  return <RootLayoutNav />
 }
 
 function RootLayoutNav() {
-  const colorScheme = useColorScheme();
+  const colorScheme = useColorScheme()
 
   return (
     <TamaguiProvider config={config} defaultTheme={colorScheme ?? 'light'}>
@@ -58,5 +54,5 @@ function RootLayoutNav() {
         </Stack>
       </ThemeProvider>
     </TamaguiProvider>
-  );
+  )
 }
