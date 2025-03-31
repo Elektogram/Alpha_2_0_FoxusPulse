@@ -5,11 +5,11 @@ import { useUser } from '@/lib/firebaseHooks'
 import { tokens } from '@/tokens'
 import { themes } from '@/themes'
 
-type NotificationToggleProps = {
+type ScoreDisplayProps = {
   title?: string
 }
 
-export default function NotificationToggle({ title = 'NotificationToggle' }: NotificationToggleProps) {
+export default function ScoreDisplay({ title = 'ScoreDisplay' }: ScoreDisplayProps) {
   const theme = useTheme()
   const { user } = useUser()
 

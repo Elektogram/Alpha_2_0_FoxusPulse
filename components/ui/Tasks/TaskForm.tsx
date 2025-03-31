@@ -5,11 +5,11 @@ import { useUser } from '@/lib/firebaseHooks'
 import { tokens } from '@/tokens'
 import { themes } from '@/themes'
 
-type NotificationToggleProps = {
+type TaskFormProps = {
   title?: string
 }
 
-export default function NotificationToggle({ title = 'NotificationToggle' }: NotificationToggleProps) {
+export default function TaskForm({ title = 'TaskForm' }: TaskFormProps) {
   const theme = useTheme()
   const { user } = useUser()
 

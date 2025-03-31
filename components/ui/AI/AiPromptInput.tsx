@@ -5,11 +5,11 @@ import { useUser } from '@/lib/firebaseHooks'
 import { tokens } from '@/tokens'
 import { themes } from '@/themes'
 
-type NotificationToggleProps = {
+type AiPromptInputProps = {
   title?: string
 }
 
-export default function NotificationToggle({ title = 'NotificationToggle' }: NotificationToggleProps) {
+export default function AiPromptInput({ title = 'AiPromptInput' }: AiPromptInputProps) {
   const theme = useTheme()
   const { user } = useUser()
 
