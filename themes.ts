@@ -11,6 +11,8 @@ export const themes = {
     surface: '#F7EBD5',
     border: '#E0E0E0',
     card: '#F7EBD5',
+    tabText: '#111111',
+    tabIcon: '#E04A0B',
   },
   light: {
     background: '#FFFFFF',
@@ -22,6 +24,8 @@ export const themes = {
     surface: '#F7EBD5',
     border: '#E0E0E0',
     card: '#F7EBD5',
+    tabText: '#111111',
+    tabIcon: '#E04A0B',
   },
   dark: {
     background: '#121212',
@@ -33,5 +37,7 @@ export const themes = {
     surface: '#1E1E1E',
     border: '#2C2C2C',
     card: '#1E1E1E',
+    tabText: '#EDEDED',
+    tabIcon: '#E04A0B', // ya da #E04A0B,#FEA721 sana kalmış
   },
 }

@@ -5,6 +5,7 @@ import { Tabs } from 'expo-router'
 import { Pressable } from 'react-native'
 import { useColorScheme } from '@/components/useColorScheme'
 import { Text } from 'tamagui'
+import { themes } from '@/themes'; // veya '../themes' projenin yapısına göre
 
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name']
@@ -15,13 +16,13 @@ function TabBarIcon(props: {
 
 export default function TabLayout() {
   const colorScheme = useColorScheme()
-
+  const currentTheme = themes[colorScheme ?? 'light'];
   return (
     <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: '$primary',
-        headerShown: false, // sadeleştirildi
-      }}
+    screenOptions={{
+      tabBarActiveTintColor: currentTheme.tabIcon,
+      tabBarInactiveTintColor: currentTheme.tabText,
+      headerShown: false,      }}
     >
       <Tabs.Screen
         name="index"

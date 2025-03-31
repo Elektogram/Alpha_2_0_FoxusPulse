@@ -28569,6 +28569,8 @@
         "surface": "#F7EBD5",
         "border": "#E0E0E0",
         "card": "#F7EBD5",
+        "tabText": "#111111",
+        "tabIcon": "#E04A0B",
         "id": "base"
       },
       "light": {
@@ -28581,6 +28583,8 @@
         "surface": "#F7EBD5",
         "border": "#E0E0E0",
         "card": "#F7EBD5",
+        "tabText": "#111111",
+        "tabIcon": "#E04A0B",
         "id": "light"
       },
       "dark": {
@@ -28593,6 +28597,8 @@
         "surface": "#1E1E1E",
         "border": "#2C2C2C",
         "card": "#1E1E1E",
+        "tabText": "#E04A0B",
+        "tabIcon": "#E04A0B",
         "id": "dark"
       }
     },
