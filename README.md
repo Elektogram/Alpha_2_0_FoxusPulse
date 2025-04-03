@@ -12,8 +12,9 @@ Verimlilik odaklı mobil uygulama. Görev takibi, AI destekli planlama ve puan s
 ## 📁 Klasör Yapısı
 
 ```
-
 Alpha_2_0_FoxusPulse
+├─ .tamagui
+│  └─ tamagui.config.json
 ├─ app
 │  ├─ (tabs)
 │  │  ├─ index.tsx
@@ -45,6 +46,34 @@ Alpha_2_0_FoxusPulse
 ├─ babel.config.js
 ├─ components
 │  ├─ ui
+│  │  ├─ AI
+│  │  │  ├─ InputBox.tsx
+│  │  │  ├─ ResponseView.tsx
+│  │  │  └─ SpeechButton.tsx
+│  │  ├─ Calendar
+│  │  │  ├─ Day.tsx
+│  │  │  ├─ Grid.tsx
+│  │  │  ├─ Header.tsx
+│  │  │  └─ SelectedTasks.tsx
+│  │  ├─ Common
+│  │  │  ├─ AppHeader.tsx
+│  │  │  ├─ BottomTabBar.tsx
+│  │  │  ├─ Button.tsx
+│  │  │  ├─ EmptyState.tsx
+│  │  │  ├─ ThemedText.tsx
+│  │  │  └─ ThemedView.tsx
+│  │  ├─ Rewards
+│  │  │  ├─ Badge.tsx
+│  │  │  ├─ Points.tsx
+│  │  │  └─ ProgressBar.tsx
+│  │  ├─ Settings
+│  │  │  ├─ NotificationToggle.tsx
+│  │  │  └─ Screen.tsx
+│  │  └─ Tasks
+│  │     ├─ AddButton.tsx
+│  │     ├─ InputForm.tsx
+│  │     ├─ TaskItem.tsx
+│  │     └─ TaskList.tsx
 │  ├─ useColorScheme.ts
 │  └─ useColorScheme.web.ts
 ├─ lib

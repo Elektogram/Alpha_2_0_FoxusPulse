@@ -12,7 +12,7 @@ export const tokens = {
       // Neutrals
       background: '#FFFFFF',
       backgroundDark: '#121212',
-      text: '#111111',
+      text: '#2B3E4F',
       textDark: '#EDEDED',
       border: '#E0E0E0',
       disabled: '#A0A0A0',
@@ -66,7 +66,7 @@ export const tokens = {
           },
         },
         body: {
-          family: 'Manrope',
+          family: 'system-ui',
           size: {
             2: 14,
             3: 16,
